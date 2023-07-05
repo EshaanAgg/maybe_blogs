@@ -25,7 +25,7 @@ This data is NOT santised before rendering.
 let count = 1;
 $: double = count * 2;
 $: console.log("This statement will be logged every time count changes.");
-$ if (count > 10){
+$ if (count > 10) {
     console.log("For multiline uses.");
     console.log("With or without the if, the bracket notation can be used.")
 }
@@ -54,25 +54,23 @@ export let prop1 = "Default value";
 
 #### Conditionals
 
-```js
+```html
 {#if porridge.temperature > 100}
-    <p>Too hot!</p>
+<p>Too hot!</p>
 {:else if 80 > porridge.temperature}
-    <p>Too cold!</p>
+<p>Too cold!</p>
 {:else}
-    <p>Just right!</p>
+<p>Just right!</p>
 {/if}
 ```
 
 #### Loops
 
-```js
+```html
 {#each items as item (item.id)}
-    <li> {item.name} x {item.qty} </li>
-{/each}
-
-{#each items as item, i (item.id)}
-  <li> {i + 1}: {item.name} x {item.qty} </li>
+<li>{item.name} x {item.qty}</li>
+{/each} {#each items as item, i (item.id)}
+<li>{i + 1}: {item.name} x {item.qty}</li>
 {/each}
 ```
 
@@ -82,13 +80,13 @@ export let prop1 = "Default value";
 
 #### Promises
 
-```js
+```html
 {#await promise}
-  <p>Waiting for the promise to resolve...</p>
+<p>Waiting for the promise to resolve...</p>
 {:then value}
-  <p>The value of the resolved promise is {value}</p>
+<p>The value of the resolved promise is {value}</p>
 {:catch error}
-  <p>Something went wrong: {error.message}</p>
+<p>Something went wrong: {error.message}</p>
 {/await}
 ```
 
@@ -99,9 +97,9 @@ export let prop1 = "Default value";
 
 - Key blocks destroy and recreate their contents when the value of an expression changes.
 
-```js
+```html
 {#key value}
-    <Component />
-    <div transition:fade>{value}</div>
+<Component />
+<div transition:fade>{value}</div>
 {/key}
 ```

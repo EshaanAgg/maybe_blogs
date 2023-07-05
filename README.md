@@ -11,3 +11,7 @@ This repository contains a lot of random thoughts I have, and even short notes t
 ### Far Fetched Ideas
 
 - [ ] Editorial (Discussions) of `Type Challenges` for my favourite exercises
+
+### Ongoing
+
+- Trying to [learn Svelte](./Svelte/)
